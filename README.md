@@ -43,7 +43,7 @@ Please attach persistant storage for collections directory:
 
     docker run -d -p 5232:5232 -v {collections-dir}:/data/collections nott/radicale
 
-After few seconds, open http://{host}:5232/{userX}.
+After few seconds, open http://{host}:5232/radicale/{userX}.
 
   [Radicale]: http://radicale.org/
   [Docker]: https://www.docker.com/
