@@ -5,12 +5,11 @@ RUN yum -y update; yum clean all;
 RUN yum -y install radicale
 
 ADD radicale.conf /etc/radicale/config
-ADD htpasswd /etc/radicale/users
-RUN mkdir /var/lib/radicale/collections && \
-    chown -R radicale: /var/lib/radicale && \
-    chmod -R +r /etc/radicale/
+ADD htpasswd /data/users
+RUN mkdir -p /data/collections && \
+    chown -R radicale: /data/
 
-VOLUME ["/var/lib/radicale/collections", "/var/log/radicale"]
+VOLUME ["/data/collections", "/var/log/radicale"]
 
 EXPOSE 5232
 
