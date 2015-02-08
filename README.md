@@ -39,7 +39,7 @@ Than you can run instance of Radicale:
 Attach volumes
 --------------
 
-Please attach persistant storage for collections direcotry:
+Please attach persistant storage for collections directory:
 
     docker run -d -p 5232:5232 -v {collections-dir}:/data/collections nott/radicale
 
